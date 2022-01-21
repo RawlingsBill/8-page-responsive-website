@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Astronomy Ireland</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="CSS/nogrid.css" />
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myNav");
+        if (x.className === "Nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "Nav";
+        }
+      }
+
+      function validateEmail(elementValue) {
+        var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(elementValue);
+      }
+
+      function isNumeric(numericValue) {
+        var numberPattern = /^[0-9]+$/;
+        return numberPattern.test(numericValue);
+      }
+
+      function validate() {
+        var name_val = document.getElementById("name").value;
+        if (name_val == null || name_val == "") {
+          alert("Please enter your first name.");
+          return false;
+        }
+        var Lname_val = document.getElementById("lastname").value;
+        if (Lname_val == null || Lname_val == "") {
+          alert("Please enter your last name.");
+          return false;
+        }
+        var age_val = document.getElementById("age").value;
+        if (age_val == null || age_val == "") {
+          alert("Please enter your age.");
+          return false;
+        }
+        var phone_val = document.getElementById("phone").value;
+        if (phone_val == null || phone_val == "") {
+          alert("Please enter your phone number.");
+          return false;
+        }
+        var email_val = document.getElementById("email").value;
+        if (email_val == null || email_val == "") {
+          alert("Please enter your email.");
+          return false;
+        }
+        var email2_val = document.getElementById("email2").value;
+        if (email2_val == null || email2_val == "") {
+          alert("Please re-enter your email.");
+          return false;
+        }
+
+        if (name_val.length > 20) {
+          alert("Max character for name 20");
+          return false;
+        }
+
+        if (isNumeric(age_val) == false) {
+          alert("Please enter numeric value for age");
+          return false;
+        }
+
+        if (age_val > 100 || age_val < 1) {
+          alert("Please enter age between 1 and 100");
+          return false;
+        }
+
+        if (isNumeric(phone_val) == false) {
+          alert("Please enter numeric value for phone");
+          return false;
+        }
+
+        if (validateEmail(email_val) == false) {
+          alert("Please enter valid email address");
+          return false;
+        }
+
+        if (email_val != email2_val) {
+          alert("Email addresses must match");
+          return false;
+        }
+          
+
+        if (typeof Storage != "undefined") {
+          localStorage.setItem("name", name_val);
+
+          localStorage.setItem("lastname", Lname_val);
+
+          localStorage.setItem("email", email_val);
+        } else alert("Browser does not support local storage");
+      }
+    </script>
+
+    <style></style>
+  </head>
+
+  <body>
+    <div class="headContainer">
+      <header class="logo">
+        <a href="index.html"
+          ><img src="images/logo.JPG" alt="Astronomy Ireland Logo"
+        /></a>
+        <!-- Logo created using wix logo creator https://www.wix.com/logo/maker -->
+      </header>
+    </div>
+    <div class="container">
+      <nav class="Nav" id="myNav">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="sky.html">Tonight's Sky</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a id="selected" href="contact.html">Contact us</a>
+        <a href="style.html">Style</a>
+        <a href="validation.html">Validation</a>
+        <a href="javascript:void(0);" id="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+
+      <h1>Contact Us</h1>
+
+      <form
+        id="contactForm"
+        action="confirmationPage.html"
+        method="get"
+        onSubmit="return validate();"
+      >
+        <p>
+          <label class="info" for="name">First name (max 20 characters)</label>
+          <input name="name" type="text" id="name" onMouseOver="" />
+        </p>
+        <p>
+          <label class="info" for="lastname"
+            >Last name (max 20 characters)</label
+          >
+          <input type="text" name="lastname" id="lastname" onMouseOver="" />
+        </p>
+        <p>
+          <label class="info" for="age">Age (from 1 to 100)</label>
+          <input type="text" name="age" id="age" />
+        </p>
+        <p>
+          <label class="info" for="phone">PhoneNumber</label>
+          <input type="text" name="phone" id="phone" />
+        </p>
+        <p>
+          <label class="info" for="email">Email Address</label>
+          <input type="text" name="email" id="email" />
+        </p>
+        <p>
+          <label class="info" for="email2">Retype Email Address</label>
+          <input type="text" name="email2" id="email2" />
+        </p>
+        <p>
+          <input type="reset" value="Reset" id="reset" />
+          <input type="submit" name="submit" id="submit" value="Submit" />
+        </p>
+      </form>
+    </div>
+    <div class="containerfoot">
+      <div class="footerA foot">
+        <h2>Contact Information</h2>
+        <ul>
+          <li>Email : admin@astronomy.ie</li>
+          <li>Phone : 086 06 46 555</li>
+          <li>
+            Post : Astronomy Ireland <br />
+            FREEPOST <br />
+            P.O. Box 2888 <br />
+            Dublin 5
+          </li>
+        </ul>
+      </div>
+
+      <div class="footerB foot">
+        <h2>Links</h2>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="sky.html">Tonight's Sky</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="style.html">Style</a></li>
+          <li><a href="validation.html">Validation</a></li>
+        </ul>
+      </div>
+
+      <div class="footerC foot">
+        <h2>Social Media</h2>
+
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img
+                class="social"
+                src="images/facebook.png"
+                alt="Facebook link"
+            /></a>
+          </li>
+        <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          <li>
+            <a href="https://twitter.com/?lang=en"
+              ><img class="social" src="images/twitter.png" alt="Twitter Link"
+            /></a>
+          </li>
+        </ul>
+          <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img
+                class="social"
+                src="images/instagram.png"
+                alt="Instagram Link"
+            /></a>
+          </li>
+<!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img class="social" src="images/youtube.png" alt="Youtube Link"
+            /></a>
+              <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

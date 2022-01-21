@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Image Gallery</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="CSS/nogrid.css" />
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myNav");
+        if (x.className === "Nav") {
+          x.className += " responsive";
+        } else {
+          x.className = "Nav";
+        }
+      }
+    </script>
+
+    <style></style>
+  </head>
+
+  <body>
+    <div class="headContainer">
+      <header class="logo">
+        <a href="index.html"
+          ><img src="images/logo.JPG" alt="Astronomy Ireland Logo"
+        /></a>
+        <!-- Logo created using wix logo creator https://www.wix.com/logo/maker -->
+      </header>
+    </div>
+    <div class="container">
+      <nav class="Nav" id="myNav">
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a href="sky.html">Tonight's Sky</a>
+        <a id="selected" href="gallery.html">Gallery</a>
+        <a href="shop.html">Shop</a>
+        <a href="contact.html">Contact us</a>
+        <a href="style.html">Style</a>
+        <a href="validation.html">Validation</a>
+        <a href="javascript:void(0);" id="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+
+      <h1>Image Gallery</h1>
+
+      <p>
+        <img src="images/pic1.jpg" alt="Blue galaxy" id="Main" />
+          <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+      </p>
+
+      <p>
+        <a href="#" id="1"
+          ><img src="images/thumbnails/pic1.jpg" alt="Blue galaxy"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="2"
+          ><img src="images/thumbnails/pic2.jpg" alt="Dark Galaxy"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="3"
+          ><img src="images/thumbnails/pic3.jpg" alt="Galaxy"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="4"
+          ><img src="images/thumbnails/pic4.jpg" alt="Jupiter"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+      </p>
+      <p>Move the cursor over the images/picture you wish to preview</p>
+      <p>
+        <a href="#" id="5"
+          ><img src="images/thumbnails/pic5.jpg" alt="Milky Way"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="6"
+          ><img src="images/thumbnails/pic6.jpg" alt="Milky Way"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="7"
+          ><img src="images/thumbnails/pic7.jpg" alt="Orange Nebula"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+        <a href="#" id="8"
+          ><img src="images/thumbnails/pic8.jpg" alt="Milky way Night"
+        /></a> <!-- Image sourced from https://www.rawpixel.com/ copyright free images -->
+      </p>
+
+      <p>
+        <a href="#" id="prevLink">Previous |</a>
+        <a href="#" id="nextLink">Next</a>
+      </p>
+    </div>
+    <div class="containerfoot">
+      <div class="footerA foot">
+        <h2>Contact Information</h2>
+        <ul>
+          <li>Email : admin@astronomy.ie</li>
+          <li>Phone : 086 06 46 555</li>
+          <li>
+            Post : Astronomy Ireland <br />
+            FREEPOST <br />
+            P.O. Box 2888 <br />
+            Dublin 5
+          </li>
+        </ul>
+      </div>
+
+      <div class="footerB foot">
+        <h2>Links</h2>
+
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="sky.html">Tonight's Sky</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="contact.html">Contact us</a></li>
+          <li><a href="style.html">Style</a></li>
+          <li><a href="validation.html">Validation</a></li>
+        </ul>
+      </div>
+
+     <div class="footerC foot">
+        <h2>Social Media</h2>
+
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/"
+              ><img
+                class="social"
+                src="images/facebook.png"
+                alt="Facebook link"
+            /></a>
+          </li>
+        <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          <li>
+            <a href="https://twitter.com/?lang=en"
+              ><img class="social" src="images/twitter.png" alt="Twitter Link"
+            /></a>
+          </li>
+        </ul>
+          <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/"
+              ><img
+                class="social"
+                src="images/instagram.png"
+                alt="Instagram Link"
+            /></a>
+          </li>
+<!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          <li>
+            <a href="https://www.youtube.com/"
+              ><img class="social" src="images/youtube.png" alt="Youtube Link"
+            /></a>
+              <!-- Image created from www.mightyandtrue.com/social-icon-generator -->
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      var currentImg = 1;
+
+      document.getElementById("1").addEventListener("mouseover", loadImage);
+      document.getElementById("2").addEventListener("mouseover", loadImage);
+      document.getElementById("3").addEventListener("mouseover", loadImage);
+      document.getElementById("4").addEventListener("mouseover", loadImage);
+      document.getElementById("5").addEventListener("mouseover", loadImage);
+      document.getElementById("6").addEventListener("mouseover", loadImage);
+      document.getElementById("7").addEventListener("mouseover", loadImage);
+      document.getElementById("8").addEventListener("mouseover", loadImage);
+
+      document.getElementById("prevLink").addEventListener("click", prevLink);
+      document.getElementById("nextLink").addEventListener("click", nextLink);
+
+      function loadImage() {
+        imgNum = this.id;
+        document.getElementById("Main").src = "images/pic" + imgNum + ".jpg";
+        currentImg = imgNum;
+      }
+
+      function nextLink() {
+        if (currentImg == 8) {
+          document.getElementById("Main").src = "images/pic1.jpg";
+          currentImg = 1;
+        } else {
+          currentImg++;
+          document.getElementById("Main").src =
+            "images/pic" + currentImg + ".jpg";
+        }
+      }
+
+      function prevLink() {
+        if (currentImg == 1) {
+          document.getElementById("Main").src = "images/pic8.jpg";
+          currentImg = 8;
+        } else {
+          currentImg--;
+          document.getElementById("Main").src =
+            "images/pic" + currentImg + ".jpg";
+        }
+      }
+    </script>
+  </body>
+</html>
